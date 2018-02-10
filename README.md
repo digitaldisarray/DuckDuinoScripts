@@ -3,3 +3,5 @@
 
 ## Scripts
  - DiscordDelete.ino - Deletes a set ammount of discord messages.
+ - WallpaperChangerWin10.ino - Changes the wallpaper of Windows 10.
+ 
