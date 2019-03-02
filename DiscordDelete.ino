@@ -1,49 +1,44 @@
 #include "Keyboard.h"
 
-void typeKey(int key)
-{
-  Keyboard.press(key);
-  delay(50);
-  Keyboard.release(key);
+void typeKey(int key) {
+    Keyboard.press(key);
+    delay(50);
+    Keyboard.release(key);
 }
 
-/* Init function */
-void setup()
-{
-  // Begining the Keyboard stream
-  Keyboard.begin();
-  
-  // Delete i messages
-  for(int i = 0; i < 100; i++) {
-    // Wait 500ms
-    delay(500);
+void setup() {
+    Keyboard.begin();
 
-    typeKey(KEY_UP_ARROW);
+    // Delete i messages
+    for (int i = 0; i < 100; i++) {
+        // Wait 500ms
+        delay(500);
 
-    delay(200);
+        typeKey(KEY_UP_ARROW);
 
-    Keyboard.press(KEY_LEFT_CTRL);
-    Keyboard.press('a');
-    Keyboard.releaseAll();
-  
-    delay(200);
+        delay(200);
 
-    typeKey(KEY_DELETE);
+        Keyboard.press(KEY_LEFT_CTRL);
+        Keyboard.press('a');
+        Keyboard.releaseAll();
 
-    delay(50);
+        delay(200);
 
-    typeKey(KEY_RETURN);
+        typeKey(KEY_DELETE);
 
-    delay(100);
+        delay(50);
 
-    typeKey(KEY_RETURN);
-  }
+        typeKey(KEY_RETURN);
 
-  // Ending stream
-  Keyboard.end();
+        delay(100);
+
+        typeKey(KEY_RETURN);
+    }
+
+    // Ending stream
+    Keyboard.end();
 }
 
 void loop() {
-  
-}
 
+}
